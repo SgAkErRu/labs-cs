@@ -255,14 +255,14 @@
         <ScilabString as="exprs" height="3" width="1">
           <data line="0" column="0" value="56"/>
           <data line="1" column="0" value="0"/>
-          <data line="2" column="0" value="1024"/>
+          <data line="2" column="0" value="10000"/>
         </ScilabString>
         <ScilabDouble as="realParameters" height="1" width="2">
           <data line="0" column="0" realPart="56.0"/>
           <data line="0" column="1" realPart="0.0"/>
         </ScilabDouble>
         <ScilabInteger as="integerParameters" height="1" width="1" intPrecision="sci_int32">
-          <data line="0" column="0" value="1024"/>
+          <data line="0" column="0" value="10000"/>
         </ScilabInteger>
         <Array as="objectsParameters" scilabClass="ScilabList"/>
         <ScilabInteger as="nbZerosCrossing" height="1" width="1" intPrecision="sci_int32">
