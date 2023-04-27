@@ -12,3 +12,5 @@
 # CodeBlock-es
 *.depend
 *.layout
+
+.directory
