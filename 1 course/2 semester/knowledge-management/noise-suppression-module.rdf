@@ -1,0 +1,1162 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module/"
+     xml:base="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:noise-suppression-module="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#быть_кодируемым -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#быть_кодируемым">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#кодировать"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#быть_частью -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#быть_частью">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#содержать"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#записывать -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#записывать">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Микрофон"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Звук"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#изменять -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#изменять">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#обрабатывать"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Фильтрация_сигналов"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Цифровой_сигнал"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Аудиосигнал"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Видеосигнал"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#измерять -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#измерять">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#обрабатывать"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Методика_измерения_качества"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_уровень_качества_в_баллах"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_уровень_разборчивости_в_баллах"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#кодировать -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#кодировать">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#обрабатывать"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Кодирование_сигналов"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Цифровой_сигнал"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Аудиосигнал"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Видеосигнал"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#обрабатывать -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#обрабатывать">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Цифровая_обработка_сигналов"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Цифровой_сигнал"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Аудиосигнал"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Видеосигнал"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#содержать -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#содержать">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Видеоконференция"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Медиаданные"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#содержать_информацию_о -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#содержать_информацию_о">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Аудиосигнал"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Звук"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#характеризовать -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#характеризовать">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#обрабатывать"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Спектральный_анализ"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Аудиосигнал"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#быть_непрерывно_передаваемым_по_каналу_связи -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#быть_непрерывно_передаваемым_по_каналу_связи">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#быть_передаваемым_по_каналу_связи"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Цифровой_сигнал"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#быть_передаваемым_по_каналу_связи -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#быть_передаваемым_по_каналу_связи">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Цифровой_сигнал"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#изменять_в_режиме_реального_времени -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#изменять_в_режиме_реального_времени">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Фильтрация_сигналов"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_битрейт_в_битах -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_битрейт_в_битах">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Кодирование_сигналов"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_высоту_в_барках -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_высоту_в_барках">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Звук"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_громкость_в_дБ -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_громкость_в_дБ">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Звук"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_громкость_шума_значительно_меньше_речевого_сигнала -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_громкость_шума_значительно_меньше_речевого_сигнала">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Шум"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_диапазон_частот -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_диапазон_частот">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Спектральный_анализ"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_динамичную_спектральную_характеристику -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_динамичную_спектральную_характеристику">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Шум"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_статичную_спектральную_характеристику"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_задержку_в_миллисекундах -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_задержку_в_миллисекундах">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Медиапоток"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_количество_кадров_в_секунду -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_количество_кадров_в_секунду">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Видеокодек"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_количество_участников -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_количество_участников">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Видеоконференция"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_простую_структуру_диапазона_частот -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_простую_структуру_диапазона_частот">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Шум"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_сложную_структуру_диапазона_частот"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_процент_потерь_данных -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_процент_потерь_данных">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Медиапоток"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_разрешение_изображения -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_разрешение_изображения">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Видеокодек"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_сложную_структуру_диапазона_частот -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_сложную_структуру_диапазона_частот">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Шум"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_статичную_спектральную_характеристику -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_статичную_спектральную_характеристику">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Шум"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_степень_сжатия_в_процентах -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_степень_сжатия_в_процентах">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Кодирование_сигналов"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_тип_микрофона -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_тип_микрофона">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Микрофон"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_уровень_искажений_в_процентах -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_уровень_искажений_в_процентах">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Кодирование_сигналов"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_уровень_качества_в_баллах -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_уровень_качества_в_баллах">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Речевой_сигнал"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_уровень_разборчивости_в_баллах -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_уровень_разборчивости_в_баллах">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Речевой_сигнал"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_уровень_собственных_шумов_в_процентах -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_уровень_собственных_шумов_в_процентах">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Микрофон"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Анализ_сигналов -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Анализ_сигналов">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Цифровая_обработка_сигналов"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Аналоговый_сигнал -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Аналоговый_сигнал">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Сигнал"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Цифровой_сигнал"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Аудиокодек -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Аудиокодек">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Кодирование_сигналов"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Видеокодек"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Аудиосигнал -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Аудиосигнал">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Сигнал"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Видеосигнал"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Текстовое_сообщение"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Файл"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Видеокодек -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Видеокодек">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Кодирование_сигналов"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Видеоконференция -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Видеоконференция"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Видеосигнал -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Видеосигнал">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Сигнал"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Текстовое_сообщение"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Файл"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Динамичный_шум -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Динамичный_шум">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Шум"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_динамичную_спектральную_характеристику"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Статичный_шум"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Зашумленный_динамичным_шумом_сигнал -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Зашумленный_динамичным_шумом_сигнал">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Зашумленный_сигнал"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#содержать_информацию_о"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Динамичный_шум"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Зашумленный_сигнал"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Зашумленный_статичным_шумом_сигнал"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Зашумленный_простым_шумом_сигнал -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Зашумленный_простым_шумом_сигнал">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Зашумленный_сигнал"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#содержать_информацию_о"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Простой_шум"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Зашумленный_сложным_шумом_сигнал"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Зашумленный_сигнал -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Зашумленный_сигнал">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Аудиосигнал"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#содержать_информацию_о"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Шум"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Зашумленный_сложным_шумом_сигнал -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Зашумленный_сложным_шумом_сигнал">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Зашумленный_сигнал"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#содержать_информацию_о"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Сложный_шум"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Зашумленный_статичным_шумом_сигнал -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Зашумленный_статичным_шумом_сигнал">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Зашумленный_сигнал"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#содержать_информацию_о"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Статичный_шум"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Зашумленный_тихим_шумом_сигнал -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Зашумленный_тихим_шумом_сигнал">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Зашумленный_сигнал"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#содержать_информацию_о"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Тихий_шум"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Звук -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Звук"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Кодирование_сигналов -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Кодирование_сигналов">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Цифровая_обработка_сигналов"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Медиаданные -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Медиаданные">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Цифровой_сигнал"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#быть_передаваемым_по_каналу_связи"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Медиапоток -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Медиапоток">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Медиаданные"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Аудиосигнал"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Видеосигнал"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#быть_непрерывно_передаваемым_по_каналу_связи"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Методика_измерения_качества -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Методика_измерения_качества">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Анализ_сигналов"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Микрофон -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Микрофон"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Музыкальные_звуки -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Музыкальные_звуки">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Звук"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Речевые_звуки"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Шум"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Простой_шум -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Простой_шум">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Шум"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_простую_структуру_диапазона_частот"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Сложный_шум"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Речевой_сигнал -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Речевой_сигнал">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Аудиосигнал"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#содержать_информацию_о"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Речевые_звуки"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Аудиосигнал"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Речевые_звуки -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Речевые_звуки">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Звук"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Шум"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Сигнал -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Сигнал"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Сложный_шум -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Сложный_шум">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Шум"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_сложную_структуру_диапазона_частот"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Спектральное_вычитание -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Спектральное_вычитание">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Шумоподавление"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#изменять"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Зашумленный_сложным_шумом_сигнал"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Зашумленный_статичным_шумом_сигнал"/>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Фильтрация_сигналов"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Фильтр_полосы_частот"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Фильтр_с_применением_рекуррентной_нейронной_сети"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Спектральный_анализ -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Спектральный_анализ">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Анализ_сигналов"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Статичный_шум -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Статичный_шум">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Шум"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_статичную_спектральную_характеристику"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Текстовое_сообщение -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Текстовое_сообщение">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Медиаданные"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Тихий_шум -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Тихий_шум">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Шум"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#иметь_громкость_шума_значительно_меньше_речевого_сигнала"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Файл -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Файл">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Медиаданные"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Фильтр_полосы_частот -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Фильтр_полосы_частот">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Шумоподавление"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#изменять"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Зашумленный_простым_шумом_сигнал"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Зашумленный_статичным_шумом_сигнал"/>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Фильтрация_сигналов"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Фильтр_с_применением_рекуррентной_нейронной_сети"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Фильтр_с_применением_рекуррентной_нейронной_сети -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Фильтр_с_применением_рекуррентной_нейронной_сети">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Шумоподавление"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#изменять"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Зашумленный_динамичным_шумом_сигнал"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Фильтрация_сигналов_в_реальном_времени"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Фильтрация_сигналов -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Фильтрация_сигналов">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Цифровая_обработка_сигналов"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Фильтрация_сигналов_в_реальном_времени -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Фильтрация_сигналов_в_реальном_времени">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Фильтрация_сигналов"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#изменять_в_режиме_реального_времени"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Цифровая_обработка_сигналов -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Цифровая_обработка_сигналов"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Цифровой_сигнал -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Цифровой_сигнал">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Сигнал"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Шум -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Шум">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Звук"/>
+        <rdfs:comment>Все звуки, не являющиеся человеческой речью, могут быть отнесены к категории шума. Например: помехи, стуки, шипение, электрические щелчки и трески, гул, и так далее.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Шумовой_порог -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Шумовой_порог">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Шумоподавление"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#изменять"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Зашумленный_тихим_шумом_сигнал"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Фильтрация_сигналов"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Шумоподавление -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Шумоподавление">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Фильтрация_сигналов"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#обрабатывать"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Аудиосигнал"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#звук_речевой_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#звук_речевой_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Речевые_звуки"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#звук_речевой_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#звук_речевой_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Речевые_звуки"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#звук_шума_простого_статичного -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#звук_шума_простого_статичного">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Шум"/>
+        <noise-suppression-module:иметь_простую_структуру_диапазона_частот rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</noise-suppression-module:иметь_простую_структуру_диапазона_частот>
+        <noise-suppression-module:иметь_статичную_спектральную_характеристику rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</noise-suppression-module:иметь_статичную_спектральную_характеристику>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#звук_шума_сложного_динамичного -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#звук_шума_сложного_динамичного">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Шум"/>
+        <noise-suppression-module:иметь_динамичную_спектральную_характеристику rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</noise-suppression-module:иметь_динамичную_спектральную_характеристику>
+        <noise-suppression-module:иметь_сложную_структуру_диапазона_частот rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</noise-suppression-module:иметь_сложную_структуру_диапазона_частот>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#звук_шума_сложного_статичного -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#звук_шума_сложного_статичного">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Шум"/>
+        <noise-suppression-module:иметь_сложную_структуру_диапазона_частот rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</noise-suppression-module:иметь_сложную_структуру_диапазона_частот>
+        <noise-suppression-module:иметь_статичную_спектральную_характеристику rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</noise-suppression-module:иметь_статичную_спектральную_характеристику>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#звук_шума_тихого -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#звук_шума_тихого">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Шум"/>
+        <noise-suppression-module:иметь_громкость_шума_значительно_меньше_речевого_сигнала rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</noise-suppression-module:иметь_громкость_шума_значительно_меньше_речевого_сигнала>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#звуковая_дорожка_без_шума -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#звуковая_дорожка_без_шума">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Цифровой_сигнал"/>
+        <noise-suppression-module:быть_кодируемым rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#кодек_opus"/>
+        <noise-suppression-module:содержать_информацию_о rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#звук_речевой_1"/>
+        <noise-suppression-module:содержать_информацию_о rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#звук_речевой_2"/>
+        <noise-suppression-module:быть_непрерывно_передаваемым_по_каналу_связи rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</noise-suppression-module:быть_непрерывно_передаваемым_по_каналу_связи>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#звуковая_дорожка_с_речью_и_шумом -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#звуковая_дорожка_с_речью_и_шумом">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Аудиосигнал"/>
+        <noise-suppression-module:быть_кодируемым rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#кодек_opus"/>
+        <noise-suppression-module:содержать_информацию_о rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#звук_речевой_1"/>
+        <noise-suppression-module:содержать_информацию_о rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#звук_шума_тихого"/>
+        <noise-suppression-module:быть_непрерывно_передаваемым_по_каналу_связи rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</noise-suppression-module:быть_непрерывно_передаваемым_по_каналу_связи>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#кодек_opus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#кодек_opus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Аудиокодек"/>
+        <noise-suppression-module:иметь_битрейт_в_битах rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64</noise-suppression-module:иметь_битрейт_в_битах>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#микрофон_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#микрофон_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Микрофон"/>
+        <noise-suppression-module:записывать rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#звук_речевой_1"/>
+        <noise-suppression-module:записывать rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#звук_речевой_2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#сигнал_с_динамичным_сложным_шумом -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#сигнал_с_динамичным_сложным_шумом">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Аудиосигнал"/>
+        <noise-suppression-module:содержать_информацию_о rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#звук_шума_сложного_динамичного"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#сигнал_с_простым_статичным_шумом -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#сигнал_с_простым_статичным_шумом">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Аудиосигнал"/>
+        <noise-suppression-module:содержать_информацию_о rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#звук_шума_простого_статичного"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#сигнал_с_сложным_статичным_шумом -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#сигнал_с_сложным_статичным_шумом">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Аудиосигнал"/>
+        <noise-suppression-module:содержать_информацию_о rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#звук_шума_сложного_статичного"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#шумоподавление_RNNoise -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#шумоподавление_RNNoise">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Шумоподавление"/>
+        <noise-suppression-module:изменять rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#сигнал_с_динамичным_сложным_шумом"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#шумоподавление_спектральное_вычитание -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#шумоподавление_спектральное_вычитание">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Шумоподавление"/>
+        <noise-suppression-module:изменять rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#сигнал_с_сложным_статичным_шумом"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#шумоподавление_фильтр_нижних_частот -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#шумоподавление_фильтр_нижних_частот">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Шумоподавление"/>
+        <noise-suppression-module:изменять rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#сигнал_с_простым_статичным_шумом"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#шумоподавление_шумовой_порог -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#шумоподавление_шумовой_порог">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Шумоподавление"/>
+        <noise-suppression-module:изменять rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#звуковая_дорожка_с_речью_и_шумом"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#MOS_(субъективный_метод_экспертных_оценок) -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#MOS_(субъективный_метод_экспертных_оценок)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Методика_измерения_качества"/>
+        <noise-suppression-module:измерять rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#звуковая_дорожка_без_шума"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#PESQ_(объективный_метод_определения_качества) -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#PESQ_(объективный_метод_определения_качества)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#Методика_измерения_качества"/>
+        <noise-suppression-module:измерять rdf:resource="http://www.semanticweb.org/sergey/ontologies/2023/3/noise-suppression-module#звуковая_дорожка_без_шума"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
