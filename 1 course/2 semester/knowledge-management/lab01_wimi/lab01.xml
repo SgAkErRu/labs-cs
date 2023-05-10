@@ -1,0 +1,133 @@
+<model id="{440b17cf-6fbc-4890-8706-202ec906e827}" shortName="Модель работы грузового порта" formatXmlVersion="2.0" description="Model 1">
+<class id="{e70bbc55-2043-4dd6-8bf3-1aa8556a54ae}" shortName="Модель работы грузового порта">
+<parameters>
+<parameter id="00b2a6c7-05d4-4dc1-8333-909e36e00d07" shortName="Доход с заявки, выполненной в срок" defaultValue="65000.00" type="double"/>
+<parameter id="06b61dc0-1e2e-4766-8842-f4a44e259f7b" shortName="ЛО P5" type="double"/>
+<parameter id="0f9a46b4-4168-4dba-b1fd-46d8e5b794c1" shortName="Вес P7" defaultValue="0.20" type="double"/>
+<parameter id="121064e1-3f21-40de-9a04-b81457845c8f" shortName="ЛО P8" type="double"/>
+<parameter id="1255acad-762d-4082-b309-c9c73b6b2443" shortName="Вес P4" defaultValue="0.10" type="double"/>
+<parameter id="12b333c1-b0f6-41b7-b6b3-3d1a35c62a36" shortName="Вес P2" defaultValue="0.30" type="double"/>
+<parameter id="13079a90-1ec3-4a3e-9475-318ca835c3e0" shortName="Вес P1" defaultValue="0.40" type="double"/>
+<parameter id="170c1caf-a97c-47e6-b75f-d676d0dd49b8" shortName="P7. Процент утерянного груза при&#xa;погрузке" type="double"/>
+<parameter id="17f2b50b-b2eb-4ca6-80ff-b545f4ab5027" shortName="P8. Затраты на обучение сотрудников" type="double"/>
+<parameter id="1cab8126-1102-4e1e-a977-b16e70cd21b8" shortName="ИО ведущего тальмана" type="double"/>
+<parameter id="1d9ce1fe-32c4-429b-97b1-146a72ebfbe2" shortName="Вес P6" defaultValue="0.30" type="double"/>
+<parameter id="20209d04-73ac-424e-93c6-8e03ccf1e4d1" shortName="Вес P3" defaultValue="0.20" type="double"/>
+<parameter id="24ec7a51-ddd5-4b16-a0ba-df84a91c0006" shortName="Доход (суммарный)" type="double"/>
+<parameter id="2986bc34-d9cb-4ab5-a34c-5d84b0c93d5e" shortName="ИО ведущего инженера" type="double"/>
+<parameter id="371a46ed-c22d-4ea6-aa71-1677080e177f" shortName="ИО отдела &#xa;бухгалтерии" type="double"/>
+<parameter id="3e52c258-11f2-416a-ae9b-93c809169845" shortName="Основные средства" defaultValue="2500000.00" type="double"/>
+<parameter id="3fa5977c-dd1e-4a06-b9b0-c7794c2b82b0" shortName="ЛО P4" type="double"/>
+<parameter id="4a5fe168-af00-4454-859e-bae8d710e974" shortName="ЛО P7" type="double"/>
+<parameter id="55877097-07be-4fe1-9ffd-ed4ced58c6fb" shortName="Интегральный показатель" type="double"/>
+<parameter id="57355649-a469-4715-bcf4-eaa000d3cf15" shortName="P6. Процент недовольных клиентов" type="double"/>
+<parameter id="584f9b96-3f70-455e-b8bf-cc002c1f188f" shortName="Количество выполненных заявок" type="double"/>
+<parameter id="5ce5c64a-a797-43cf-ae09-a17dcc6a7e0c" shortName="ЛО P2" type="double"/>
+<parameter id="5dbf0880-0648-4b96-87e6-b563d6b596e7" shortName="ИО тальманского &#xa;отдела" type="double"/>
+<parameter id="5e34f8cf-b174-40f6-aac5-1969a6f3282a" shortName="P3. Процент погрузочных работ, выполненных в срок" type="double"/>
+<parameter id="638abeb3-df20-4126-ab14-6ba7fb5f08f6" shortName="Вес P8" defaultValue="0.10" type="double"/>
+<parameter id="67962848-977e-44b9-8c04-d55d41d7cd33" shortName="Количество заявок, выполненных не в срок" type="double"/>
+<parameter id="85e0675d-5239-46b3-9ea3-19abeae063f4" shortName="ЛО P3" type="double"/>
+<parameter id="918d2df8-6d44-4225-a987-1d75363f78ef" shortName="Количество поступивших заявок" type="double"/>
+<parameter id="96d9d0c5-8acb-4b01-8f86-273b74611217" shortName="P2. Фондоотдача" type="double"/>
+<parameter id="9ad7d5d4-fa3a-4ac6-8bf4-7f66de30f544" shortName="P4. Процент привлеченных&#xa;клиентов" type="double"/>
+<parameter id="b4094f24-7cd9-49ba-8c5c-25c5572c9000" shortName="Количество заявок, выполненных в срок" type="double"/>
+<parameter id="b626506f-0121-4bed-ad79-a6e20c4b75e4" shortName="ЛО P6" type="double"/>
+<parameter id="d0dd761d-7c9e-46bc-829f-c4e74608ca9d" shortName="ИО начальника порта" description="Интенсивность обслуживания" type="double"/>
+<parameter id="d565097f-3bc2-4a16-b347-a7c9648edc3d" shortName="ИО директора" type="double"/>
+<parameter id="d569f67a-928f-4e6d-97b9-e9a9598fc169" shortName="P1. Прибыль" type="double"/>
+<parameter id="e8e3220a-0967-4c29-b263-0947b92a6e2d" shortName="ЛО P1" type="double"/>
+<parameter id="fbb43c41-f643-4394-bad5-4c4e1211c6bf" shortName="Вес P5" defaultValue="0.50" type="double"/>
+<parameter id="fc8e80c4-ab10-413b-a663-2d863da48815" shortName="ИО инженерного отдела" type="double"/>
+<parameter id="ff480676-bdd3-4862-9529-0aa1a72c595c" shortName="P5. Затраты на зарплату сотрудникам" type="double"/>
+</parameters>
+<rules>
+<rule id="03d77809-265e-42bc-aeec-9e8629e3e97b" shortName="ЛО P5" relation="f4aba83a-62e3-4fdd-adb5-6563d56c05d2" resultId="y:06b61dc0-1e2e-4766-8842-f4a44e259f7b" initId="p5:ff480676-bdd3-4862-9529-0aa1a72c595c"/>
+<rule id="22f1080b-ddcd-4984-9af0-eb12d0e07740" shortName="ЛО P1" relation="8c18f5da-950f-483d-80e0-15ce6ed1d81c" resultId="y:e8e3220a-0967-4c29-b263-0947b92a6e2d" initId="p1:d569f67a-928f-4e6d-97b9-e9a9598fc169"/>
+<rule id="267f4c11-ef16-4848-84ed-d8c9370b7a53" shortName="Расчет затрат на обучение сотрудников" relation="8b38cb86-454d-4e95-b826-1c8710eb426b" resultId="y:17f2b50b-b2eb-4ca6-80ff-b545f4ab5027" initId="a2:5dbf0880-0648-4b96-87e6-b563d6b596e7;a7:fc8e80c4-ab10-413b-a663-2d863da48815;a4:371a46ed-c22d-4ea6-aa71-1677080e177f;a3:d565097f-3bc2-4a16-b347-a7c9648edc3d;a6:1cab8126-1102-4e1e-a977-b16e70cd21b8;a1:2986bc34-d9cb-4ab5-a34c-5d84b0c93d5e;a5:d0dd761d-7c9e-46bc-829f-c4e74608ca9d"/>
+<rule id="2829398b-c9c8-4ab9-84e1-877404dbbcd5" shortName="ЛО P4" relation="9e24c9c9-2eb8-4305-a8ec-228cf96538c5" resultId="y:3fa5977c-dd1e-4a06-b9b0-c7794c2b82b0" initId="p4:9ad7d5d4-fa3a-4ac6-8bf4-7f66de30f544"/>
+<rule id="3c8c9d58-2833-495a-83d3-9ae00256f2f9" shortName="ЛО P8" relation="7e963921-a20d-4da5-8a90-5c2840b11737" resultId="y:121064e1-3f21-40de-9a04-b81457845c8f" initId="p8:17f2b50b-b2eb-4ca6-80ff-b545f4ab5027"/>
+<rule id="622b632e-8ceb-42c3-8917-5403f0bdfcab" shortName="Расчет прибыли" relation="b6a312e3-cd7e-4a6f-98fc-f60bdcdf979b" resultId="y:d569f67a-928f-4e6d-97b9-e9a9598fc169" initId="a:24ec7a51-ddd5-4b16-a0ba-df84a91c0006;b:ff480676-bdd3-4862-9529-0aa1a72c595c;c:17f2b50b-b2eb-4ca6-80ff-b545f4ab5027"/>
+<rule id="66e55b10-851a-4033-bac4-9db0e8b7f571" shortName="Расчет процента недовольных клиентов" relation="94f3021a-2002-4702-bc06-104a1aba0a24" resultId="y:57355649-a469-4715-bcf4-eaa000d3cf15" initId="a:9ad7d5d4-fa3a-4ac6-8bf4-7f66de30f544"/>
+<rule id="6e77fee8-70cc-4c0f-bc00-a4aac1fa8096" shortName="Интегральный показатель" relation="52097b1b-d8bd-4b7c-982c-ad70c17faf49" resultId="y:55877097-07be-4fe1-9ffd-ed4ced58c6fb" initId="l1:e8e3220a-0967-4c29-b263-0947b92a6e2d;w1:13079a90-1ec3-4a3e-9475-318ca835c3e0;w4:1255acad-762d-4082-b309-c9c73b6b2443;w6:1d9ce1fe-32c4-429b-97b1-146a72ebfbe2;l7:4a5fe168-af00-4454-859e-bae8d710e974;w3:20209d04-73ac-424e-93c6-8e03ccf1e4d1;l4:3fa5977c-dd1e-4a06-b9b0-c7794c2b82b0;l2:5ce5c64a-a797-43cf-ae09-a17dcc6a7e0c;l8:121064e1-3f21-40de-9a04-b81457845c8f;w5:fbb43c41-f643-4394-bad5-4c4e1211c6bf;l5:06b61dc0-1e2e-4766-8842-f4a44e259f7b;l6:b626506f-0121-4bed-ad79-a6e20c4b75e4;l3:85e0675d-5239-46b3-9ea3-19abeae063f4;w7:0f9a46b4-4168-4dba-b1fd-46d8e5b794c1;w2:12b333c1-b0f6-41b7-b6b3-3d1a35c62a36;w8:638abeb3-df20-4126-ab14-6ba7fb5f08f6"/>
+<rule id="88df1b01-540e-4902-b12c-cd50b7004d93" shortName="Расчет процента погрузочных работ,&#xa;выполненных в&#xa;срок" relation="ee89cb31-9008-41a1-944d-96296c920af4" resultId="y:5e34f8cf-b174-40f6-aac5-1969a6f3282a" initId="a:584f9b96-3f70-455e-b8bf-cc002c1f188f;b:67962848-977e-44b9-8c04-d55d41d7cd33;c:918d2df8-6d44-4225-a987-1d75363f78ef"/>
+<rule id="90311f9c-87cc-4897-b19e-4362e947204e" shortName="ЛО P2" relation="99e656fc-b624-4ae8-9763-4b841f157c5b" resultId="y:5ce5c64a-a797-43cf-ae09-a17dcc6a7e0c" initId="p2:96d9d0c5-8acb-4b01-8f86-273b74611217"/>
+<rule id="a312c49e-4ccf-4307-a34e-1613bf3c34d7" shortName="ЛО P7" relation="9c6d8693-8d00-4578-b471-1121fa1b27c7" resultId="y:4a5fe168-af00-4454-859e-bae8d710e974" initId="p7:170c1caf-a97c-47e6-b75f-d676d0dd49b8"/>
+<rule id="cbebc5f4-dde3-4749-ae8a-34392399b6c4" shortName="Расчет фондоотдачи" relation="32116214-1805-4240-b5ee-5e57efa0dcbf" resultId="y:96d9d0c5-8acb-4b01-8f86-273b74611217" initId="a:24ec7a51-ddd5-4b16-a0ba-df84a91c0006;b:3e52c258-11f2-416a-ae9b-93c809169845"/>
+<rule id="cc1308e9-767b-46ab-a3e6-50ba81c8d8f5" shortName="ЛО P3" relation="71104b6c-3431-4ca1-800f-55257cb38654" resultId="y:85e0675d-5239-46b3-9ea3-19abeae063f4" initId="p3:5e34f8cf-b174-40f6-aac5-1969a6f3282a"/>
+<rule id="d4d160a1-023f-4226-9af7-c9767e7a11de" shortName="Расчет процента утерянного груза при погрузке" relation="721dbc3b-f678-4ef7-af27-9b1d8014aaeb" resultId="y:170c1caf-a97c-47e6-b75f-d676d0dd49b8" initId="a:584f9b96-3f70-455e-b8bf-cc002c1f188f;b:918d2df8-6d44-4225-a987-1d75363f78ef"/>
+<rule id="d55fd7ec-c329-4275-94f4-e92dcf977120" shortName="Расчет дохода суммарного" relation="b908912c-e099-47a9-ac97-483bc251ee25" resultId="y:24ec7a51-ddd5-4b16-a0ba-df84a91c0006" initId="a:00b2a6c7-05d4-4dc1-8333-909e36e00d07;d:67962848-977e-44b9-8c04-d55d41d7cd33;b:b4094f24-7cd9-49ba-8c5c-25c5572c9000;c:00b2a6c7-05d4-4dc1-8333-909e36e00d07"/>
+<rule id="d70a9311-2b5e-4b8c-b51f-6a688a5532c8" shortName="Расчет количества &#xa;выполненных&#xa;заявок в срок" relation="d94d6309-562c-43eb-a1a2-4165fdc2e296" resultId="y:b4094f24-7cd9-49ba-8c5c-25c5572c9000" initId="a:584f9b96-3f70-455e-b8bf-cc002c1f188f;b:67962848-977e-44b9-8c04-d55d41d7cd33"/>
+<rule id="e5069b7f-6c41-4a0e-8909-87d78350e8f2" shortName="Расчет процента привлеченных клиентов" relation="5b58bc3f-87a4-451f-8bc7-3b5c039feef9" resultId="y:9ad7d5d4-fa3a-4ac6-8bf4-7f66de30f544" initId="a:170c1caf-a97c-47e6-b75f-d676d0dd49b8;b:584f9b96-3f70-455e-b8bf-cc002c1f188f;c:918d2df8-6d44-4225-a987-1d75363f78ef"/>
+<rule id="f0b86582-6ea5-4caf-ab45-b320df2e60c4" shortName="Расчет затрат на&#xa;заработную плату сотрудникам" relation="cdb47f45-3295-4468-b7d8-d15bed1e2b7f" resultId="y:ff480676-bdd3-4862-9529-0aa1a72c595c" initId="a2:5dbf0880-0648-4b96-87e6-b563d6b596e7;a7:fc8e80c4-ab10-413b-a663-2d863da48815;a4:371a46ed-c22d-4ea6-aa71-1677080e177f;a3:d565097f-3bc2-4a16-b347-a7c9648edc3d;a6:1cab8126-1102-4e1e-a977-b16e70cd21b8;a1:2986bc34-d9cb-4ab5-a34c-5d84b0c93d5e;a5:d0dd761d-7c9e-46bc-829f-c4e74608ca9d"/>
+<rule id="f7d8db97-061b-499a-88c3-42d6f128e49a" shortName="ЛО Р6" relation="6ed251b0-06e0-44ad-9b08-a74072817062" resultId="y:b626506f-0121-4bed-ad79-a6e20c4b75e4" initId="p6:57355649-a469-4715-bcf4-eaa000d3cf15"/>
+</rules>
+<constraints/>
+<classes/>
+</class>
+<relations>
+<relation id="32116214-1805-4240-b5ee-5e57efa0dcbf" shortName="y = a/b" inObj="a:double;b:double" relationType="simple" description="Выражение, показывающее отношение двух величин " outObj="y:double">y = a/b</relation>
+<relation id="52097b1b-d8bd-4b7c-982c-ad70c17faf49" shortName="Расчет интегрального &#xa;показателя" inObj="l1:double;w1:double;w4:double;w6:double;l7:double;w3:double;l4:double;l2:double;l8:double;w5:double;l5:double;l6:double;l3:double;w7:double;w2:double;w8:double" relationType="simple" description="Формула расчета интегрального показателя " outObj="y:double">y=(w1*l1 + w2*l2 + w3*l3 + 
+w4*l4) - (w5*l5 + w6*l6 + w7*l7 + 
+w8*l8) </relation>
+<relation id="5b58bc3f-87a4-451f-8bc7-3b5c039feef9" shortName="y = (1 - a)*b/c" inObj="a:double;b:double;c:double" relationType="simple" description="Выражение, предназначенное для расчета процента &#xa;привлеченных клиентов " outObj="y:double">y = (1 - a)*b/c</relation>
+<relation id="6ed251b0-06e0-44ad-9b08-a74072817062" shortName="Расчет ЛО P6" inObj="p6:double" relationType="prog" description="Данное отношение сложное. Поэтому сначала создаются 2 &#xa;переменные: p6, y. P6 – это параметр «Процент &#xa;недовольных клиентов», а Y – это значение ЛО P6. Далее &#xa;идут простые условия типа: &#xa;ЕСЛИ p6 &lt; x1,  ТО y = z1, ИНАЧЕ ЕСЛИ p6 &lt; x2, ТО y = z2, &#xa;ИНАЧЕ ЕСЛИ …" outObj="y:double">var p6, y; 
+if (p6 &lt; 0.01) {y = 1;} 
+else if (p6 &lt; 0.02) {y = 2;} 
+else if (p6 &lt; 0.03) {y = 3;} 
+else if (p6 &lt; 0.06) {y = 4;} 
+else if (p6 > 0.06) {y = 5;} </relation>
+<relation id="71104b6c-3431-4ca1-800f-55257cb38654" shortName="Расчет ЛО P3" inObj="p3:double" relationType="prog" description="Данное отношение сложное. Поэтому сначала создаются 2 &#xa;переменные: p3, y. P3 – это параметр «Процент &#xa;погрузочных работ, выполненных в срок», а Y – это &#xa;значение ЛО P3. Далее идут простые условия типа: &#xa;ЕСЛИ p3 &lt; x1,  ТО y = z1, ИНАЧЕ ЕСЛИ p3 &lt; x2, ТО y = z2, &#xa;ИНАЧЕ ЕСЛИ …" outObj="y:double">var p3, y; 
+if (p3 &lt; 0.2) {y = 1;} 
+else if (p3 &lt; 0.4) {y = 2;} 
+else if (p3 &lt; 0.6) {y = 3;} 
+else if (p3 &lt; 0.8) {y = 4;} 
+else if (p3 > 0.8) {y = 5;} </relation>
+<relation id="721dbc3b-f678-4ef7-af27-9b1d8014aaeb" shortName="y = 1 - a/b" inObj="a:double;b:double" relationType="simple" description="Выражение, предназначенное для расчета процента &#xa;утерянного груза при погрузке " outObj="y:double">y = 1 - a/b</relation>
+<relation id="7e963921-a20d-4da5-8a90-5c2840b11737" shortName="Расчет ЛО P8" inObj="p8:double" relationType="prog" description="Данное отношение сложное. Поэтому сначала создаются 2 &#xa;переменные: p8, y. P8 – это параметр «Затраты на обучение &#xa;сотрудников», а Y – это значение ЛО P8. Далее идут &#xa;простые условия типа: &#xa;ЕСЛИ p8 &lt; x1,  ТО y = z1, ИНАЧЕ ЕСЛИ p8 &lt; x2, ТО y = z2, &#xa;ИНАЧЕ ЕСЛИ … " outObj="y:double">var p8, y; 
+if (p8 &lt; 10000) {y = 1;} 
+else if (p8 &lt; 20000) {y = 2;} 
+else if (p8 &lt; 30000) {y = 3;} 
+else if (p8 &lt; 35000) {y = 4;} 
+else if (p8 > 35000) {y = 5;}</relation>
+<relation id="8b38cb86-454d-4e95-b826-1c8710eb426b" shortName="y = 20*300*(a1 + a2 + &#xa;a3 + a4 + a5 + a6 + a7)" inObj="a2:double;a7:double;a4:double;a3:double;a6:double;a1:double;a5:double" relationType="simple" description="Выражение для расчета затрат на обучение сотрудников " outObj="y:double">y = 20*300*(a1 + a2 + 
+a3 + a4 + a5 + a6 + a7)</relation>
+<relation id="8c18f5da-950f-483d-80e0-15ce6ed1d81c" shortName="Расчет ЛО P1" inObj="p1:double" relationType="prog" description="Данное отношение сложное. Поэтому сначала создаются 2 &#xa;переменные: p1, y. P1 – это параметр «Прибыль», а Y – это &#xa;значение ЛО P1. Далее идут простые условия типа: &#xa;ЕСЛИ p1 &lt; x1,  ТО y = z1, ИНАЧЕ ЕСЛИ p1 &lt; x2, ТО y = z2, &#xa;ИНАЧЕ ЕСЛИ …" outObj="y:double">var p1, y; 
+if (p1 &lt; 50000) {y = 1;} 
+else if (p1 &lt; 100000) {y = 2;} 
+else if (p1 &lt; 200000) {y = 3;} 
+else if (p1 &lt; 300000) {y = 4;} 
+else if (p1 > 300000) {y = 5;}</relation>
+<relation id="94f3021a-2002-4702-bc06-104a1aba0a24" shortName="y = 1 - a" inObj="a:double" relationType="simple" description="Выражение, предназначенное для расчета процента &#xa;недовольных клиентов " outObj="y:double">y = 1 - a</relation>
+<relation id="99e656fc-b624-4ae8-9763-4b841f157c5b" shortName="Расчет ЛО P2" inObj="p2:double" relationType="prog" description="Данное отношение сложное. Поэтому сначала создаются 2 &#xa;переменные: p2, y. P2 – это параметр «Фондоотдача», а Y – &#xa;это значение ЛО P2. Далее идут простые условия типа: &#xa;ЕСЛИ p2 &lt; x1,  ТО y = z1, ИНАЧЕ ЕСЛИ p2 &lt; x2, ТО y = z2, &#xa;ИНАЧЕ ЕСЛИ … " outObj="y:double">var p2, y; 
+if (p2 &lt; 0.2) {y = 1;} 
+else if (p2 &lt; 0.4) {y = 2;} 
+else if (p2 &lt; 0.6) {y = 3;} 
+else if (p2 &lt; 0.8) {y = 4;} 
+else if (p2 > 0.8) {y = 5;}</relation>
+<relation id="9c6d8693-8d00-4578-b471-1121fa1b27c7" shortName="Расчет ЛО P7 " inObj="p7:double" relationType="prog" description="Данное отношение сложное. Поэтому сначала создаются 2 &#xa;переменные: p7, y. P7 – это параметр «Процент утерянного груза при погрузке», а Y – это значение ЛО P7. Далее идут &#xa;простые условия типа: &#xa;ЕСЛИ p7 &lt; x1,  ТО y = z1, ИНАЧЕ ЕСЛИ p7 &lt; x2, ТО y = z2, &#xa;ИНАЧЕ ЕСЛИ … " outObj="y:double">var p7, y; 
+if (p7 &lt; 0.1) {y = 1;}
+else if (p7 &lt; 0.3) {y = 2;} 
+else if (p7 &lt; 0.4) {y = 3;} 
+else if (p7 &lt; 0.6) {y = 4;} 
+else if (p7 > 0.6) {y = 5;}</relation>
+<relation id="9e24c9c9-2eb8-4305-a8ec-228cf96538c5" shortName="Расчет ЛО P4 " inObj="p4:double" relationType="prog" description="Данное отношение сложное. Поэтому сначала создаются 2 &#xa;переменные: p4, y. P4 – это параметр «Процент &#xa;привлеченных клиентов», а Y – это значение ЛО P4. Далее &#xa;идут простые условия типа: &#xa;ЕСЛИ p4 &lt; x1,  ТО y = z1, ИНАЧЕ ЕСЛИ p4 &lt; x2, ТО y = z2, &#xa;ИНАЧЕ ЕСЛИ …" outObj="y:double">var p4, y; 
+if (p4 &lt; 0.01) {y = 1;} 
+else if (p4 &lt; 0.02) {y = 2;} 
+else if (p4 &lt; 0.03) {y = 3;} 
+else if (p4 &lt; 0.06) {y = 4;} 
+else if (p4> 0.06) {y = 5;}</relation>
+<relation id="b6a312e3-cd7e-4a6f-98fc-f60bdcdf979b" shortName="y = a - b - c" inObj="a:double;b:double;c:double" relationType="simple" description="Выражение, когда из одного числа вычитаются два других " outObj="y:double">y = a - b - c</relation>
+<relation id="b908912c-e099-47a9-ac97-483bc251ee25" shortName="y = (a*b) + (c*d)/2" inObj="a:double;d:double;b:double;c:double" relationType="simple" description="Выражение для расчета суммарного дохода (по всем &#xa;выполненным заявкам) " outObj="y:double">y = (a*b) + (c*d)/2</relation>
+<relation id="cdb47f45-3295-4468-b7d8-d15bed1e2b7f" shortName="y = 30*1500*(a1 + a2 + &#xa;a3 + a4 + a5 + a6 + a7)" inObj="a2:double;a7:double;a4:double;a3:double;a6:double;a1:double;a5:double" relationType="simple" description="Выражение, предназначенное для расчета затрат на выдачу &#xa;заработной платы сотрудникам " outObj="y:double">y = 30*1500*(a1 + a2 + a3 + a4 + 
+a5 + a6 + a7)</relation>
+<relation id="d94d6309-562c-43eb-a1a2-4165fdc2e296" shortName="y = a - b" inObj="a:double;b:double" relationType="simple" description="Выражение, когда из одного числа вычитается другое " outObj="y:double">y = a - b</relation>
+<relation id="ee89cb31-9008-41a1-944d-96296c920af4" shortName="y = (a - b)/c" inObj="a:double;b:double;c:double" relationType="simple" description="Выражение, показывающее отношение между разностью &#xa;двух величин и третьей величиной " outObj="y:double">y = (a - b)/c</relation>
+<relation id="f4aba83a-62e3-4fdd-adb5-6563d56c05d2" shortName="Расчет ЛО Р5" inObj="p5:double" relationType="prog" description="Данное отношение сложное. Поэтому сначала создаются 2 &#xa;переменные: p5, y. P5 – это параметр «Затраты на зарплату &#xa;сотрудникам», а Y – это значение ЛО P5. Далее идут &#xa;простые условия типа:  &#xa;ЕСЛИ p5 &lt; x1,  ТО y = z1, ИНАЧЕ ЕСЛИ p5 &lt; x2, ТО y = z2, &#xa;ИНАЧЕ ЕСЛИ … " outObj="y:double">var p5, y; 
+if (p5 &lt; 245000) {y = 1;} 
+else if (p5 &lt; 265000) {y = 2;} 
+else if (p5 &lt; 285000) {y = 3;} 
+else if (p5 &lt; 300000) {y = 4;} 
+else if (p5 > 300000) {y = 5;}</relation>
+</relations>
+</model>
